@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap");
+
+@theme {
+  /* Tipografia */
+  --font-body: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-heading: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Paleta PRD */
+  --color-primary: #0A2342; /* Azul profundo */
+  --color-accent: #FFC107; /* Amarelo energia */
+  --color-neutral-1: #FFFFFF; /* Branco */
+  --color-neutral-2: #F4F6F8; /* Cinza claro */
+  --color-neutral-3: #444444; /* Cinza escuro */
+  --color-secondary: #1976D2; /* Azul médio */
+  /* Base */
+  --color-bg: var(--color-neutral-1);
+  --color-text: #0f172a; /* Slate-900 */
+}
+
+/* Base */
+body { background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); }
+.font-heading { font-family: var(--font-heading); }
+.font-body { font-family: var(--font-body); }
+
+/* Utilidades globais */
+.container { margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; max-width: 1280px; }
+.section { @apply py-10; }
+
+/* Botões */
+.btn { @apply inline-block px-6 py-3 rounded transition-all duration-200; font-weight: 600; }
+.btn-primary { background: var(--color-accent); color: var(--color-primary); box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+.btn-primary:hover { filter: brightness(0.9); box-shadow: 0 4px 10px rgba(0,0,0,0.12); }
+.btn-secondary { background: var(--color-primary); color: #fff; border: 2px solid var(--color-primary); }
+.btn-secondary:hover { background: var(--color-secondary); border-color: var(--color-secondary); }
+.btn-ghost { background: transparent; color: var(--color-primary); border: 1px solid var(--color-primary); }
+.btn-ghost:hover { background: var(--color-neutral-2); }
+
+/* Cards */
+.card { background: #fff; border: 1px solid #E0E0E0; border-radius: 12px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); transition: transform .2s ease, box-shadow .2s ease; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(0,0,0,0.08); }
+
+/* Hero */
+.hero { background: var(--color-primary); color: #fff; }
+.hero-min { min-height: 400px; }
+@media (min-width: 1024px) { .hero-min { min-height: 600px; } }
+
+/* Formulários */
+.input { background: #fff; border: 1px solid #CCCCCC; border-radius: 6px; padding: 10px 14px; }
+.input:focus { outline: none; border-color: var(--color-secondary); box-shadow: 0 0 0 3px rgba(25,118,210,0.15); }
+.label { font-size: 0.875rem; color: var(--color-neutral-3); }
+
+/* CTA WhatsApp pulse */
+@keyframes gf-pulse {
+  0%, 92%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(34,197,94,0); }
+  94% { transform: scale(1.05); box-shadow: 0 0 0 8px rgba(34,197,94,0.2); }
+  96% { transform: scale(1.03); box-shadow: 0 0 0 12px rgba(34,197,94,0.15); }
+  98% { transform: scale(1.01); box-shadow: 0 0 0 16px rgba(34,197,94,0.1); }
+}
+.pulse-5s { animation: gf-pulse 5s ease-in-out infinite; }
