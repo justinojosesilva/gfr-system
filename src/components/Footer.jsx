@@ -1,5 +1,5 @@
 import { SiFacebook, SiInstagram, SiYoutube, SiTiktok } from 'react-icons/si'
-import { FaPhone, FaWhatsapp } from 'react-icons/fa'
+import { FaEnvelope, FaPhone, FaWhatsapp } from 'react-icons/fa'
 
 export default function Footer() {
   return (
@@ -29,6 +29,10 @@ export default function Footer() {
                 <li className="flex items-center gap-2">
                   <FaWhatsapp aria-label="WhatsApp" className="text-green-400" size={18} />
                   <span>(11) 99966-3140</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <FaEnvelope aria-label="E-mail" className="text-green-400" size={18} />
+                  <span>contato@gfrsystem.com.br</span>
                 </li>
               </ul>
               <div className="flex items-center gap-3 mt-3">
