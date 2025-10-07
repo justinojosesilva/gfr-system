@@ -1,5 +1,5 @@
 export default function WhatsAppCTA() {
-  const phone = '5599999999999' // placeholder
+  const phone = '5511999663140' // placeholder
   const message = encodeURIComponent('Olá! Gostaria de falar com a G.F.R sobre soluções elétricas.')
   const href = `https://wa.me/${phone}?text=${message}`
   return (
