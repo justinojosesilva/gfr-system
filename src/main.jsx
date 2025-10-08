@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Empresa from './pages/Empresa'
 import Servicos from './pages/Servicos'
 import Produtos from './pages/Produtos'
+import Produto from './pages/Produto'
 import Contato from './pages/Contato'
 
 const router = createBrowserRouter([
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       { path: 'empresa', element: <Empresa /> },
       { path: 'serviços', element: <Servicos /> },
       { path: 'produtos', element: <Produtos /> },
+      { path: 'produtos/:id', element: <Produto /> },
       { path: 'contato', element: <Contato /> },
     ],
   },
